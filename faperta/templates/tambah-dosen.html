@@ -1,0 +1,16 @@
+{% block content %}
+
+{% if pesan %}
+    <div class="alert alert-success">{{ pesan }}</div>
+{% endif %}
+
+<form action="/tambah-dosen/" method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button>Tambah Dosen</button>
+
+</form>
+
+{% endblock %}
